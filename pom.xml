@@ -17,10 +17,10 @@
     </plugins>
   </build>
   <dependencies>
-  	<dependency>
-    	<groupId>com.detectlanguage</groupId>
-    	<artifactId>detectlanguage</artifactId>
-    	<version>1.1.0</version>
+  <dependency>
+	    <groupId>com.github.pemistahl</groupId>
+	    <artifactId>lingua</artifactId>
+	    <version>1.1.1</version>
 	</dependency>
   </dependencies>
 </project>

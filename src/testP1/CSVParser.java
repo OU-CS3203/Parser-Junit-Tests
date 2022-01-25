@@ -1,17 +1,12 @@
 package testP1;
 
 import java.util.Scanner;
-
-import com.detectlanguage.DetectLanguage;
-
 import java.io.File;
 import java.io.FileNotFoundException;;
 
 public class CSVParser {
 	
 	private Scanner in;
-	
-	private DetectLanguage dl;
 	
 	public CSVParser(File csvFile) throws FileNotFoundException {
 		
