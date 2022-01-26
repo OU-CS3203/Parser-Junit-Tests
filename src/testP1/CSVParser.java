@@ -17,17 +17,15 @@ public class CSVParser {
 	final private LanguageDetector detector = LanguageDetectorBuilder.fromLanguages(ENGLISH, SPANISH).build();
 	
 	public CSVParser(File csvFile) throws FileNotFoundException {
-		
-		try {
-			in = new Scanner(csvFile);
-			in.useDelimiter(",");
-		}
-		catch(Exception e) {
-			throw new FileNotFoundException();
-		}
+		in = new Scanner(csvFile);
+		in.useDelimiter(",");
 		
 	}
 	
+	public CSVParser(String input) {
+		in = new Scanner(input);
+		in.useDelimiter(",");
+	}
 	
 	public String[] nextLine() {
 		String temp = in.nextLine();
@@ -37,6 +35,10 @@ public class CSVParser {
 	public String next() {
 		String temp = in.next();
 		return temp;
+	}
+	
+	public boolean hasNext() {
+		return in.hasNext();
 	}
 	
 	public ArrayList<String> translateCSV(){
