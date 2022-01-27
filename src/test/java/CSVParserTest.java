@@ -3,6 +3,7 @@ package test.java;
 import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import org.junit.Assert;
@@ -53,8 +54,9 @@ public class CSVParserTest {
 	}
 
 	@Test
-	public void testOrder() throws FileNotFoundException {
-		File file = new File("testOrder.csv");
+	public void testOrder() throws IOException {
+		String path = new File(".").getCanonicalPath();
+		File file = new File(path + "\\src\\test\\java\\testcsv\\testOrder.csv");
 		CSVParser parser = new CSVParser(file);
 		String[] answer = {"Talent","Purpose","Guatemala","Tower","Television","1024","Hatsune Miku","Keyboard","Por qué"};
 		int bool = 1;
