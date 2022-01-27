@@ -54,7 +54,7 @@ public class CSVParserTest {
 
 	@Test
 	public void testOrder() throws FileNotFoundException {
-		File file = new File("src\\test\\java\\testcsv\\testOrder.csv");
+		File file = new File("testOrder.csv");
 		CSVParser parser = new CSVParser(file);
 		String[] answer = {"Talent","Purpose","Guatemala","Tower","Television","1024","Hatsune Miku","Keyboard","Por qué"};
 		int bool = 1;
