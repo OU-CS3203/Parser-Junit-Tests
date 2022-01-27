@@ -56,7 +56,7 @@ public class CSVParserTest {
 	@Test
 	public void testOrder() throws IOException {
 		String path = new File(".").getCanonicalPath();
-		File file = new File(path + "\\src\\test\\java\\testcsv\\testOrder.csv");
+		File file = new File(path + "/src/test/java/testcsv/testOrder.csv");
 		CSVParser parser = new CSVParser(file);
 		String[] answer = {"Talent","Purpose","Guatemala","Tower","Television","1024","Hatsune Miku","Keyboard","Por qué"};
 		int bool = 1;
