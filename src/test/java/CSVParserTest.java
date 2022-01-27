@@ -1,3 +1,5 @@
+package test.java;
+
 import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -52,7 +54,7 @@ public class CSVParserTest {
 
 	@Test
 	public void testOrder() throws FileNotFoundException {
-		File file = new File("src\\testP1\\testcsv\\testOrder.csv");
+		File file = new File("src\\test\\java\\testcsv\\testOrder.csv");
 		CSVParser parser = new CSVParser(file);
 		String[] answer = {"Talent","Purpose","Guatemala","Tower","Television","1024","Hatsune Miku","Keyboard","Por qué"};
 		int bool = 1;
