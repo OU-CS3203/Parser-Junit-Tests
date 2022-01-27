@@ -1,13 +1,12 @@
-package testP1;
-
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Random;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.Random;
+import testP1.CSVParser;
 
 public class CSVParserTest {
 
