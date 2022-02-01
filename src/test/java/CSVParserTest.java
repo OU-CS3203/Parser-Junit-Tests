@@ -18,6 +18,7 @@ public class CSVParserTest {
 		CSVParser parser;
 	}
 
+	//test to make sure cognates are correctly identified as both languages
 	@Test
 	public void testCognate() {
 		CSVParser parser = new CSVParser("global,total");
@@ -26,6 +27,7 @@ public class CSVParserTest {
 		assertTrue(temp.get(0).equals(answer[0]) && temp.get(1).equals(answer[1]));
 	}
 	
+	//test that numbers are correctly identified as unknown
 	@Test
 	public void testNumber() {
 		
@@ -42,6 +44,7 @@ public class CSVParserTest {
 		
 	}
 	
+	//test that the translate function correctly identifies words as a certain language
 	@Test
 	public void testTranslate() {
 		
@@ -53,6 +56,7 @@ public class CSVParserTest {
 		
 	}
 
+	//test that the order is maintained when parsing a CSV
 	@Test
 	public void testOrder() throws IOException {
 		String path = new File(".").getCanonicalPath();

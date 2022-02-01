@@ -16,31 +16,37 @@ public class CSVParser {
 	private Scanner in;
 	final private LanguageDetector detector = LanguageDetectorBuilder.fromLanguages(ENGLISH, SPANISH).build();
 	
+	//Constructor for file input
 	public CSVParser(File csvFile) throws FileNotFoundException {
 		in = new Scanner(csvFile);
 		in.useDelimiter(",");
 		
 	}
 	
+	//Constructor for string input
 	public CSVParser(String input) {
 		in = new Scanner(input);
 		in.useDelimiter(",");
 	}
 	
+	//get next line using comma as the delimiter
 	public String[] nextLine() {
 		String temp = in.nextLine();
 		return temp.split(",");
 	}
 	
+	//get next
 	public String next() {
 		String temp = in.next();
 		return temp;
 	}
 	
+	//return true if there are inputs remaining
 	public boolean hasNext() {
 		return in.hasNext();
 	}
 	
+	//returns an arraylist of words along with the languages the respective words are in
 	public ArrayList<String> translateCSV(){
 		
 		ArrayList<String> translatedList = new ArrayList<String>();
@@ -72,6 +78,7 @@ public class CSVParser {
 		return translatedList;
 	}
 	
+	//close the input stream
 	public void close() {
 		in.close();
 	}
